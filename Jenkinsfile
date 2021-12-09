@@ -1,11 +1,11 @@
 pipeline {
     agent any
 
-	parameters {
+    parameters {
         string(name: 'GIT_JAVA_URL', defaultValue: '', description: 'URL GIT repository of Java Project')
-		string(name: 'GIT_JAVA_BRANCH', defaultValue: '', description: 'URL GIT repository of Java Project')
+	    string(name: 'GIT_JAVA_BRANCH', defaultValue: '', description: 'URL GIT repository of Java Project')
         choice(name: 'JDK_CHOICE', choices: ['jdk8', 'jdk11', 'jdk17'], defaultValue: 'jdk11', description: 'Choose JDK')
-    }
+	}
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
